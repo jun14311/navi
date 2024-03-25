@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼이 있는 입력 폼</title>
+</head>
+<body>
+    <h3>버튼을 만들자</h3>
+    <hr>
+    <form action="test.jsp" method="get">
+        검색 : <input type="text" name="search" size="10"><br>
+        아이디 : <input type="text" name="id" size="10" value="default">
+        <hr>
+        버튼 <input type="button" value="Q1">
+        <button type="button">Q2</button><br><br>
+        전송 <input type="submit" value="전송1">
+            <button type="submit">전송2</button><br><br>
+        리셋 <input type="reset" value="리셋1">
+            <button type="reset">리셋2</button><br><br>
+
+        이미지 <input type="image" src="./media/chrome.png" alt="이미지 버튼">
+                <button type="button">
+                    <img src="./media/chrome.png" alt="이미지 버튼">
+                </button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            margin: 15px;
+        }
+        li.hot::after{
+            content: "NEW!!";
+            font-size: small;
+            padding: 2px 4px;
+            margin: 0 10px;
+            border-radius:2px;
+            background: #f00;
+            color: #fff;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>제품 목록</h1>
+    <ul>
+        <li class="hot">제품 A</li>
+        <li>제품 B</li>
+        <li>제품 C</li>
+        <li class="hot">제품 D</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+aside {
+    float: left;
+    width: 300px;
+    padding: 30px 50px;
+    height: 100%;
+    background: rgb(216, 216, 216);
+}
+
+section{
+    width: 500px;
+    padding: 15px;
+    border: 5px solid gray;
+    float:inline-start;
+}
+

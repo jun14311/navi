@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 340px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link,
+        .login-link {
+            text-align: center;
+        }
+
+        .signup-link a,
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover,
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .signup-form {
+            position: relative;
+        }
+        .signupbutton {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+        }
+        .resetbutton {
+            position: absolute;
+            top: 7%;
+            right: 10%;
+        }
+
+        .loginbutton {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form" method="get" action="#">
+            <h2>로그인</h2>
+            <input type="text" placeholder="아이디" required>
+            <input type="password" placeholder="비밀번호" required>
+            <button type="submit" class="loginbutton">로그인</button>
+            <p class="signup-link">아이디가 없으신가요? <a href="#">회원가입</a></p>
+        </form>
+    </div>
+
+    <div class="container">
+        <form class="signup-form" style="display: none;" method="get" action="#">
+            <h2>회원가입</h2>
+            <input type="text" placeholder="아이디" required>
+            <input type="password" placeholder="비밀번호 특수문자, 대소문자 포함 8자" required>
+            <input type="text" placeholder="생년월일 6자리" required>
+            <label>
+                <input type="radio" name="gender" value="male" required> 남자
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female" required> 여자
+            </label>
+            <label>
+                <input type="radio" name="nationality" value="korean" required> 내국인
+            </label>
+            <label>
+                <input type="radio" name="nationality" value="foreigner" required> 외국인
+            </label>
+            <select name="carrier" required>
+                <option value="">통신사 선택</option>
+                <option value="SKT">SKT</option>
+                <option value="KT">KT</option>
+                <option value="LGU+">LGU+</option>
+            </select>
+            <input type="tel" placeholder="핸드폰 번호" required>
+            <button type="button" onclick="sendVerificationCode()">인증번호 받기</button>
+            <input type="text" placeholder="인증번호" required>
+            <p class="login-link">로그인 화면으로 <a href="#">돌아가기</a></p>
+            <button type="reset" class="resetbutton">초기화</button>
+            <button type="submit" class="signupbutton">회원가입</button>
+        </form>
+    </div>
+
+    <script>
+        function sendVerificationCode() {
+            // 핸드폰 인증번호 발송 콘솔
+            console.log('인증번호를 발송합니다.');
+        }
+
+        document.querySelector('.signup-link a').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.signup-form').style.display = 'block';
+        });
+
+        document.querySelector('.login-link a').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.signup-form').style.display = 'none';
+            document.querySelector('.login-form').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

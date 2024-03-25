@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형식을가진 텍스트 입력</title>
+</head>
+<body>
+        <h3>회원 정보를 입력해주세요.</h3>
+        <hr>
+        <form action="test.jsp" method="get">
+            <fieldset>
+            <label>email : <input type="email" name="email" placeholder="id@host"></label><br>
+            <label>홈페이지 : <input type="url" name="url"></label><br>
+            <label>전화번호 : <input type="tel" name="tel" placeholder="010-1234-5678"></label>
+            <button type="submit">전송</button><br>
+            </fieldset>
+            <label>검색어 : <input type="search" placeholder="검색어"></label>
+            <button type="submit">전송</button>
+        </form>
+</body>
+</html>

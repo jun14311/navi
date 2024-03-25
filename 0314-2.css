@@ -1,0 +1,43 @@
+div{
+    border: 1px solid black;
+}
+
+#a{
+    width: 900px;
+    padding: 20px;
+    margin: auto;
+}
+
+#header{
+    padding:20px;
+	margin-bottom:20px;
+}
+
+#main{
+    width: 450px;
+    padding: 20px;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 21px;
+}
+
+#side1{
+    width: 150px;
+    padding: 15px;
+    margin-bottom: 15px;
+    float: right;
+    background-color: aquamarine;
+}
+
+#side2{
+    width: 150px;
+    padding: 15px;
+    margin-bottom: 15px;
+    float: left;
+    background-color: aquamarine;
+}
+
+#footer{
+    clear: both;
+    padding: 20px;
+}
