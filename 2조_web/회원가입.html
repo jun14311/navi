@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./회원가입.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="signup-form" method="post">
+        <h2>회원가입</h2>
+        <div class="form-group">
+          <input
+            type="text"
+            id="signup-username"
+            placeholder="아이디"
+            required
+            aria-label="Username"
+          />
+          <button type="button" onclick="idCheck()" id="Checkbutton">
+            중복확인
+          </button>
+        </div>
+        <div id="signup-username-err-msg" class="err-msg"></div>
+
+        <div class="form-group" id="pw">
+          <input
+            type="password"
+            id="passwordCheck"
+            placeholder="비밀번호 (특수문자, 대소문자 포함 8글자)"
+            required
+            aria-label="Password"
+          />
+        </div>
+        <div id="password-err-msg" class="err-msg">
+          비밀번호 (특수문자, 대소문자 포함 8글자)를 입력해주세요.
+        </div>
+
+        <div class="form-group" id="pwCheck">
+          <input
+            type="password"
+            id="password"
+            placeholder="비밀번호 확인"
+            required
+            aria-label="password-check"
+          />
+        </div>
+        <div id="passwordCheck-err-msg" class="err-msg"></div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            id="signup-birthdate"
+            placeholder="생년월일 8자리 (YYYYMMDD)"
+            required
+            aria-label="Birthdate"
+          />
+        </div>
+        <div id="signup-birthdate-err-msg" class="err-msg"></div>
+
+        <div class="form-group">
+          <label>
+            <input type="radio" name="gender" value="male" required />
+            남자
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" required />
+            여자
+          </label>
+          <p class="partition">│</p>
+          <label>
+            <input type="radio" name="nationality" value="korean" required />
+            내국인
+          </label>
+          <label>
+            <input type="radio" name="nationality" value="foreigner" required />
+            외국인
+          </label>
+        </div>
+        <div id="gender-err-msg" class="err-msg">성별을 선택해주세요</div>
+        <div id="nation-err-msg" class="err-msg">국가를 선택해주세요</div>
+        <div class="form-group">
+          <select name="carrier" required>
+            <option value="">통신사 선택</option>
+            <option value="SKT">SKT</option>
+            <option value="KT">KT</option>
+            <option value="LGU+">LGU+</option>
+          </select>
+        </div>
+        <div id="select-err-msg" class="err-msg"></div>
+        <div class="form-group">
+          <input
+            type="tel"
+            id="signup-phone"
+            placeholder="핸드폰 번호"
+            required
+            aria-label="Phone number"
+          />
+          <button
+            type="button"
+            id="codebutton"
+            onclick="sendVerificationCode()"
+          >
+            인증번호 받기
+          </button>
+        </div>
+        <div id="signup-phone-err-msg" class="err-msg"></div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            id="verification-code"
+            placeholder="인증번호"
+            required
+            aria-label="Verification code"
+          />
+        </div>
+        <div id="verification-code-err-msg" class="err-msg"></div>
+
+        <button type="button" id="submitbutton" onclick="onRegister()">
+          회원가입
+        </button>
+        <p class="login-link">
+          로그인 화면으로
+          <a href="./로그인.html" id="login-link">돌아가기</a>
+        </p>
+      </form>
+      <script src="./회원가입수정.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 입력 요소를 가운데로 정렬 */
+    padding: 20px;
+}
+
+select,
+button {
+    width: 360px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    position: relative;
+    display: flex; /* 내부 요소들을 수평으로 정렬합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    width: 362px;
+}
+
+#pw,
+#pwCheck {
+    position: relative;
+    display: block; /* 내부 요소들을 수평으로 정렬합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+}
+
+.error-message {
+    font-size: 0.8em;
+}
+
+#signup-username,
+#signup-phone {
+    width: 800px; /* 핸드폰 번호 입력란의 너비를 조절합니다. */
+}
+
+#Checkbutton,
+#codebutton {
+    margin-left: 10px; /* 버튼과 입력란 사이의 간격을 조절합니다. */
+}
+
+.reset-button {
+    margin-top: 20px; /* 초기화 버튼을 제목 아래로 이동 */
+    align-self: flex-end; /* 우측 정렬 */
+}
+
+.partition {
+    margin: 10px;
+}
+
+.signup-link,
+.login-link {
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+}
+
+.button1 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 340px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="password"] {
+    -webkit-text-security: disc !important;
+    width: 340px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error-container {
+    display: flex; /* 내부 요소들을 수평으로 정렬합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+}
+
+.err-msg {
+    display: none;
+    color: red;
+    margin: 0px 0 5px 0;
+    font-size: 0.8em;
+    width: 360px;
+}
