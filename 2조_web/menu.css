@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.search{
+    width: 650px;
+    margin: 0px auto 0;
+    border-radius: 5px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -100%);
+}
+
+.sro{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+input{
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+}
+
+button{
+    border: none;
+}
+
+button .fa-solid{
+    width: 25px;
+    color: gray;
+    background: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: #D7F1FA;
+}
+
+.menu{
+    width: 250px;
+    height: 100%;
+    background: #4682b4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+}
+
+.logo{
+    display: block;
+    margin-bottom: 130px;
+}
+
+.logo-img{
+    width: 150px;
+}
+
+.nav-li{
+    list-style: none;
+    position: relative;
+}
+
+.nav-li li{
+    padding: 10px 0;
+}
+
+.nav-li li a{
+    padding: 10px 14px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-li li a i{
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.active{
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 2.6%;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.4);
+    display: none;
+    transition: top 0.5s;
+}
+
+.nav-li li:hover a{
+    color: #0d74f5;
+    transition: 0.3s;
+}
+
+.nav-li li:hover ~ .active{
+    display: block;
+}
+
+.nav-li li:nth-child(1):hover ~ .active{
+    top: 2.6%;
+}
+
+.nav-li li:nth-child(2):hover ~ .active{
+    top: 19.2%;
+}
+
+.nav-li li:nth-child(3):hover ~ .active{
+    top: 35.8%;
+}
+
+.nav-li li:nth-child(4):hover ~ .active{
+    top: 52.4%;
+}
+
+.nav-li li:nth-child(5):hover ~ .active{
+    top: 69%;
+}
+
+.nav-li li:nth-child(6):hover ~ .active{
+    top: 85.6%;
+}
+
